@@ -3,6 +3,7 @@
         --hover_color: #0357ff;
         --border_color: #dee2e6;
     }
+    
     body{
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
@@ -152,11 +153,9 @@
 
     div.work_img div{
         flex: 0 0 55vh;
-        /* margin-bottom: 2%; */
     }
 
     div.work_img div a img{
-        /* margin-bottom: 2%; */
         border-radius: 10px;
         opacity: 0.5;
         width: 100%;
