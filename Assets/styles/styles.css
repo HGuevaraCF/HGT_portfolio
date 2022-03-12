@@ -1,85 +1,151 @@
-body{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+    body{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    section{
+        height: 100vh;
+        padding-top: 8vh;
+    }
+
+/**********************Styles on nav bar section**********************/
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 10vh;
+    }
+
+    nav{
+    background-color: white;
+    position: sticky;
+    top: 0%;
     height: 10vh;
-  }
-  nav{
-      background-color: white;
-      position: sticky;
-      top: 0%;
-      height: 10vh;
-  }
-  
-  li {
-    float: left;
-    margin: 0px 2rem; 
-  }
+    }
 
-  li.start {
-      flex: auto;
-  }
+    li{
+        float: left;
+        margin: 0px 2rem; 
+    }
+
+    li.start{
+        flex: auto;
+    }
+
+    li a {
+        /* display: block; */
+        padding: 8px;
+        text-decoration: none;
+        color: #333;
+    }
+
+/**********************Styles on home section*************************/
+    .resume{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        padding: 1rem;
+    }
+    .phrase_img img#personal{
+        width: 32rem;
+    }
+
+    div.phrase_img{
+        margin-left: 8%;
+    }
+
+    div.phrase_img{
+        flex: 1;
+    }
+
+    div.phrase{
+        flex: 1;
+        padding: 0% 5%;
+        text-align: center;
+        margin-top: -10%;
+    }
+    .phrase h3{
+        margin-top: 20%;
+    }
+
+    .phrase h1{
+        font-size: 3rem;
+    }
+/**********************Styles on about section************************/
+    .about_info{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-top: 5%;
+    }
+
+    img.about_img{
+        flex: 1;
+        width: 25rem;
+        border-radius: 50%;
+    }
+
+    p.about_text{
+        flex: 1;
+        padding: 0% 5%;
+    }
+/**********************Styles on work section*************************/
+    div.work_img{
+        display: flex ;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    div.work_img img{
+        flex: 0 0 350px;
+        margin-bottom: 2%;
+        border-radius: 10px;
+        opacity: 0.5;
+        width: 30%;
+    }
+
+    div.work_img img:hover{
+        opacity: 1;
+    }
+/**********************Styles on Contact section**********************/
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input{
+        margin: 1%;
+        width: 25%;
+    }
+
+    .message{
+        height: 8rem;
+    }
+
+    .message::placeholder{
+        position: absolute;
+    }
 
 
-  
-  li a {
-    /* display: block; */
-    padding: 8px;
-    text-decoration: none;
-    color: #333;
-  }
+    /******************************Responsive Design******************************/
 
-  .resume{
-      background-image: url(https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-attachment: fixed;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      padding: 1rem;
- }
+    @media only screen and (max-width: 900px) {
+        .resume, .about_info{
+            flex-direction: column;
+        }
 
- .about_info{
-    display: flex;
-    justify-content: center;
-    align-items: center;
- }
+        section{
+            height: auto;
+        }
 
- section{
-     height: 100vh;
-     padding-top: 10vh;
- }
-
-  div.phrase, p.about_text{
-      flex: 2;
-  }
-
-  div.phrase_img, img.about_img{
-      flex: 1;
-  }
-
-  div.work_img{
-      display: flex ;
-      flex-wrap: wrap;
-      justify-content: space-between;
-  }
-
-  div.work_img img{
-      flex: 0 32%;
-      height: calc(70vh/2)!important;
-      margin-bottom: 2%;
-  }
-
-  footer{
-      background-color: cornflowerblue;
-  }
+        input{
+            width: 60%;
+        }
+    }
