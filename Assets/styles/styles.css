@@ -1,3 +1,8 @@
+    :root{
+        --font_color: #333;
+        --hover_color: #0357ff;
+        --border_color: #dee2e6;
+    }
     body{
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
@@ -5,6 +10,22 @@
     section{
         height: 100vh;
         padding-top: 8vh;
+    }
+
+    p, li{
+        font-size: 1.5vw;
+        color: var(--font_color);
+
+    }
+
+    h1{
+        font-size: 4vw;
+        color: var(--font_color);
+    }
+
+    h2{
+        font-size: 3vw;
+        color: var(--font_color);
     }
 
 /**********************Styles on nav bar section**********************/
@@ -42,17 +63,21 @@
         color: #333;
     }
 
+    li a:hover{
+        color: var(--hover_color);
+    }
+
 /**********************Styles on home section*************************/
-    .resume{
+    .home{
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        /* height: 100vh; */
         padding: 1rem;
     }
     .phrase_img img#personal{
-        width: 32rem;
+        width: 32vw;
     }
 
     div.phrase_img{
@@ -69,32 +94,47 @@
         text-align: center;
         margin-top: -10%;
     }
-    .phrase h3{
+    h2.contact_links{
         margin-top: 20%;
+        color: var(--font_color);
     }
 
-    .phrase h1{
-        font-size: 3rem;
+    h2.contact_links a{
+        text-decoration: none;
+        color: var(--font_color);
     }
+
+    h2.contact_links a:hover{
+        color: var(--hover_color);
+    }
+
+
 /**********************Styles on about section************************/
     .about_info{
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
         align-items: center;
         padding-top: 5%;
     }
 
+    .about_info center{
+        width: 100%;
+    }
+
     img.about_img{
         flex: 1;
-        width: 25rem;
+        width: 40vw;
         border-radius: 50%;
     }
 
     p.about_text{
         flex: 1;
         padding: 0% 5%;
+        text-align: justify;
     }
+
 /**********************Styles on work section*************************/
     div.work_img{
         display: flex ;
@@ -102,17 +142,42 @@
         justify-content: space-around;
     }
 
-    div.work_img img{
+    /* div.work_img img{
         flex: 0 0 350px;
         margin-bottom: 2%;
         border-radius: 10px;
         opacity: 0.5;
         width: 30%;
+    } */
+
+    div.work_img div{
+        flex: 0 0 55vh;
+        /* margin-bottom: 2%; */
+    }
+
+    div.work_img div a img{
+        /* margin-bottom: 2%; */
+        border-radius: 10px;
+        opacity: 0.5;
+        width: 100%;
+        height: 81%;
+    }
+
+    div.img_work div{
+        position: relative;
+        bottom: 17%;
+        height: 10%;
+        font-size: 1.5vw;
+        padding: 1% 0% 1% 5%;
+        border-top: solid 1px var(--border_color);
+        border-bottom: solid 1px var(--border_color);
+        background-color: rgba(255, 255, 255, 0.5);
     }
 
     div.work_img img:hover{
         opacity: 1;
     }
+
 /**********************Styles on Contact section**********************/
     form{
         display: flex;
@@ -136,16 +201,26 @@
 
     /******************************Responsive Design******************************/
 
-    @media only screen and (max-width: 900px) {
-        .resume, .about_info{
-            flex-direction: column;
-        }
-
+    @media only screen and (max-width: 1250px){
         section{
             height: auto;
         }
 
         input{
             width: 60%;
+        }
+    }
+
+    @media only screen and (max-width: 900px) {
+        .home, .about_info{
+            flex-direction: column;
+        }
+
+        div.phrase{
+            margin-top: 0%;
+        }
+
+        p.about_text{
+            margin-bottom: 8%;
         }
     }
